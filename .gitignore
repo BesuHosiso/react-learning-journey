@@ -1,0 +1,12 @@
+# Ignore dependencies for all subprojects
+node_modules/
+**/node_modules/
+
+# Ignore build folders
+dist/
+build/
+
+# Ignore environment variables and OS files
+.env
+.env.local
+.DS_Store
