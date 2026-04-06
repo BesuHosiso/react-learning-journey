@@ -4,6 +4,7 @@ import './index.css'
 import ProjectState from './components/projectState.jsx'
 import Navbar from './components/Navbar.jsx'
 import InputState from './components/projectState2.jsx'
+import Pricing from './components/pricing.jsx'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
     <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
     <InputState isDarkMode={isDarkMode} setLiveType={setLiveType}/>
     <ProjectState isDarkMode={isDarkMode} liveType={liveType}/>
-    
+    <Pricing />
    </div>
   )
 }
