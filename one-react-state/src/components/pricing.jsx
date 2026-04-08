@@ -19,12 +19,12 @@ function Pricing() {
           {pricingPlans.map((plans) => {
             return (
               <div className='border rounded-lg p-6 mb-4 flex flex-col' key={plans.id}>
-                <h2 className='text-xl font-bold'>{plans.name}</h2>
+                <h2 className='text-xl font-bold'>{plans.name} Plan</h2>
                 <p className='text-2xl font-bold mt-4'>{isYearly ? `$${plans.yearlyPrice}/year` : `$${plans.monthlyPrice}/month`}</p>
                 <ul className='mt-4'>
-                  <li className='mb-2'>Feature 1</li>
-                  <li className='mb-2'>Feature 2</li>
-                  <li className='mb-2'>Feature 3</li>
+                  <li className='mb-2'>500GB of Bandwidth with 4GB additional</li>
+                  <li className='mb-2'>Free domain name and support</li>
+                  <li className='mb-2'>Up to 1000 commits per week</li>
                 </ul>
                 <button className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 cursor-pointer mt-4'>Choose Plan</button>
               </div>
