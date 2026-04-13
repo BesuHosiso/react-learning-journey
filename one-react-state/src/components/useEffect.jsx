@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 
 function UseEffect() {
-  
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
   useEffect(() => {
     //  Fetch user name and email from an api
@@ -10,8 +10,13 @@ function UseEffect() {
     .then((response) => response.json())
     .then((data) => {
       setData(data);
+      setLoading(false);
     })
   }, []);
+
+  if (loading) return <p>Loading...</p>
+  if (!data) return <p>404 User Not Found</p>;
+  
   return (
     // User Profile Card with email username and button
     <div className='w-full max-w-md max-mx-4 mx-auto bg-white p-6 rounded-lg shadow-md mt-6 text-gray-800'>
