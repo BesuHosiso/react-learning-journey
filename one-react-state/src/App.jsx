@@ -5,6 +5,7 @@ import ProjectState from './components/projectState.jsx'
 import Navbar from './components/Navbar.jsx'
 import InputState from './components/projectState2.jsx'
 import Pricing from './components/pricing.jsx'
+import UseEffect from './components/useEffect.jsx'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <InputState isDarkMode={isDarkMode} setLiveType={setLiveType}/>
     <ProjectState isDarkMode={isDarkMode} liveType={liveType}/>
     <Pricing />
+    <UseEffect />
    </div>
   )
 }
