@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 function UseEffect() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
-  const [reType, setReType] = useState("posts");
+  const [reType, setReType] = useState("users");
   useEffect(() => {
     //  Fetch user name and email from an api
     fetch(`https://jsonplaceholder.typicode.com/${reType}`)
@@ -29,18 +29,18 @@ function UseEffect() {
     <h1 className='text-center mt-4 text-2xl font-bold'>{reType}</h1>
    {
     reType === "posts" ? (
-      <div className='w-full grid col-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center gap-4 py-4'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center py-4'>
         {data.map((item) => (
-          <div key={item.id} className='w-full max-w-md bg-gray-100 rounded-lg p-4 shadow-md'>
+          <div key={item.id} className='w-full max-w-md bg-gray-100 rounded-lg p-4 shadow-md grid grid-rows-subgrid row-span-2'>
             <h2 className='text-xl font-bold mb-2'>{item.title}</h2>
             <p className='text-gray-700'>{item.body}</p>
           </div>
         ))}
       </div>
     ) : reType === "comments" ? (
-      <div className='w-full grid col-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center gap-4 py-4'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center py-4'>
         {data.map((item) => (
-          <div key={item.id} className='w-full max-w-md bg-gray-100 rounded-lg p-4 shadow-md flex flex-1 flex-col items-start justify-start gap-2'>
+          <div key={item.id} className='w-full max-w-md bg-gray-100 rounded-lg p-4 shadow-md grid grid-rows-subgrid row-span-2'>
             <h2 className='text-xl font-bold mb-2'>{item.name}</h2>
             <p className='text-gray-700'>{item.body}</p>
           </div>
